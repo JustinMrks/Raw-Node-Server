@@ -25,15 +25,19 @@ const server = http.createServer((req, res) => {
     });
     req.on('end', () => {
       const parsedBody = Buffer.concat(body).toString();
-      console.log(parsedBody);
       const message = parsedBody.split('=')[1];
-      fs.writeFileSync('message.txt', message);
+      fs.writeFile('message.txt', message, (err) => {
+        res.statusCode = 302;
+        res.setHeader('Location', '/');
+        return res.end();
+      });
     });
-    console.log(req);
-    res.statusCode = 302;
-    res.setHeader('Location', '/');
-    return res.end();
   }
+  res.setHeader('Content-Type', 'text/html');
+  res.write('<html>');
+  res.write('<head> <h1>File Updated!</h1></head>');
+  res.write('</html>');
+  return res.end();
 });
 
 server.listen(PORT);
