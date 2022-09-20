@@ -1,0 +1,19 @@
+{
+  "name": "first-server",
+  "version": "1.0.0",
+  "description": "node app.js to run",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinMrks/Raw-Node-Server.git"
+  },
+  "author": "Justin Marks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinMrks/Raw-Node-Server/issues"
+  },
+  "homepage": "https://github.com/JustinMrks/Raw-Node-Server#readme"
+}
