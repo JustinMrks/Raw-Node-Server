@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JustinMrks/Raw-Node-Server/issues"
   },
-  "homepage": "https://github.com/JustinMrks/Raw-Node-Server#readme"
+  "homepage": "https://github.com/JustinMrks/Raw-Node-Server#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
