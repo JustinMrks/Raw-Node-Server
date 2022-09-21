@@ -1,8 +1,9 @@
 const http = require('http');
-const routes = require('./routes');
 
-const PORT = routes.port;
+const express = require('express');
 
-const server = http.createServer(routes.handler);
+const app = express();
 
-server.listen(PORT);
+const server = http.createServer(app);
+
+server.listen(3000);
