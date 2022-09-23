@@ -3,8 +3,7 @@ const express = require('express');
 const Router = express.Router();
 
 Router.get('/', (req, res, next) => {
-  console.log('in the middleware');
-  res.send('<h1>Hello from express</h1>');
+  res.send('<h1>Welcome to the shop!</h1>');
 });
 
 module.exports = Router;
