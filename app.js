@@ -8,10 +8,12 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 const bodyParser = require('body-parser');
+const { dirname } = require('path');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(rootDir, 'public')));
 
 app.use('/admin', adminRoutes);
 
